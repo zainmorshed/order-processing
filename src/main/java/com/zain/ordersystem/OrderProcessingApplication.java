@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.zain.ordersystem.enums.FulfillmentType;
+import com.zain.ordersystem.enums.PaymentMethod;
 import com.zain.ordersystem.enums.Status;
 
 @SpringBootApplication

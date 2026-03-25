@@ -631,3 +631,278 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2026-03-25T12:13:50.875-05:00  INFO 99361 --- [http-nio-8080-exec-1] c.z.o.controller.OrderController         : Finished processing order: 1
 2026-03-25T12:14:01.160-05:00  INFO 99361 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
 2026-03-25T12:14:01.179-05:00  INFO 99361 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T15:42:28.327-05:00  INFO 28547 --- [restartedMain] c.z.o.OrderProcessingApplication         : Starting OrderProcessingApplication using Java 21.0.10 with PID 28547 (/Users/zainmorshed/Desktop/GhostDrive/order-processing/target/classes started by zainmorshed in /Users/zainmorshed/Desktop/GhostDrive/order-processing)
+2026-03-25T15:42:28.330-05:00 DEBUG 28547 --- [restartedMain] c.z.o.OrderProcessingApplication         : Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-25T15:42:28.331-05:00  INFO 28547 --- [restartedMain] c.z.o.OrderProcessingApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T15:42:28.398-05:00  INFO 28547 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-25T15:42:28.399-05:00  INFO 28547 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-25T15:42:29.802-05:00  INFO 28547 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-25T15:42:29.821-05:00  INFO 28547 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T15:42:29.822-05:00  INFO 28547 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T15:42:29.858-05:00  INFO 28547 --- [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1459 ms
+2026-03-25T15:42:29.933-05:00  WARN 28547 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderProcessingApplication': Unsatisfied dependency expressed through field 'orderProcessor': Error creating bean with name 'orderProcessor' defined in file [/Users/zainmorshed/Desktop/GhostDrive/order-processing/target/classes/com/zain/ordersystem/OrderProcessor.class]: Unsatisfied dependency expressed through constructor parameter 2: No qualifying bean of type 'com.zain.ordersystem.FulfillmentStrategy' available: expected single matching bean but found 2: digitalFulfillment,shippingFulfillment
+2026-03-25T15:42:29.935-05:00  INFO 28547 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-25T15:42:29.947-05:00  INFO 28547 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-25T15:42:29.970-05:00 ERROR 28547 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 2 of constructor in com.zain.ordersystem.OrderProcessor required a single bean, but 2 were found:
+	- digitalFulfillment: defined in file [/Users/zainmorshed/Desktop/GhostDrive/order-processing/target/classes/com/zain/ordersystem/DigitalFulfillment.class]
+	- shippingFulfillment: defined in file [/Users/zainmorshed/Desktop/GhostDrive/order-processing/target/classes/com/zain/ordersystem/ShippingFulfillment.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.1-Release-Notes#parameter-name-retention)
+
+
+2026-03-25T15:54:28.372-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Starting OrderProcessingApplication using Java 21.0.10 with PID 31217 (/Users/zainmorshed/Desktop/GhostDrive/order-processing/target/classes started by zainmorshed in /Users/zainmorshed/Desktop/GhostDrive/order-processing)
+2026-03-25T15:54:28.375-05:00 DEBUG 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-25T15:54:28.376-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T15:54:28.437-05:00  INFO 31217 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-25T15:54:28.437-05:00  INFO 31217 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-25T15:54:29.301-05:00  INFO 31217 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-25T15:54:29.318-05:00  INFO 31217 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T15:54:29.318-05:00  INFO 31217 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T15:54:29.357-05:00  INFO 31217 --- [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 919 ms
+2026-03-25T15:54:29.742-05:00  INFO 31217 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-25T15:54:29.747-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Started OrderProcessingApplication in 1.958 seconds (process running for 2.484)
+2026-03-25T15:54:29.752-05:00  INFO 31217 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : Order 1 completed successfuly!
+2026-03-25T15:54:39.528-05:00  INFO 31217 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-25T15:54:39.529-05:00  INFO 31217 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-25T15:54:39.531-05:00  INFO 31217 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-25T15:54:39.743-05:00  INFO 31217 --- [http-nio-8080-exec-1] c.z.o.controller.OrderController         : Received order request: 1
+2026-03-25T15:54:39.744-05:00  INFO 31217 --- [http-nio-8080-exec-1] com.zain.ordersystem.OrderProcessor      : Order 1 completed successfuly!
+2026-03-25T15:54:39.744-05:00  INFO 31217 --- [http-nio-8080-exec-1] c.z.o.controller.OrderController         : Finished processing order: 1
+2026-03-25T15:58:53.997-05:00  INFO 31217 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-25T15:58:54.020-05:00  INFO 31217 --- [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-25T15:58:54.047-05:00  INFO 31217 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T15:58:54.181-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Starting OrderProcessingApplication using Java 21.0.10 with PID 31217 (/Users/zainmorshed/Desktop/GhostDrive/order-processing/target/classes started by zainmorshed in /Users/zainmorshed/Desktop/GhostDrive/order-processing)
+2026-03-25T15:58:54.181-05:00 DEBUG 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-25T15:58:54.181-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T15:58:54.396-05:00  INFO 31217 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-25T15:58:54.397-05:00  INFO 31217 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T15:58:54.398-05:00  INFO 31217 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T15:58:54.413-05:00  INFO 31217 --- [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 227 ms
+2026-03-25T15:58:54.517-05:00  INFO 31217 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-25T15:58:54.520-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Started OrderProcessingApplication in 0.377 seconds (process running for 267.249)
+2026-03-25T15:58:54.522-05:00  INFO 31217 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : processed using credit card
+2026-03-25T15:58:54.523-05:00  INFO 31217 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : Shipping fulfillment
+2026-03-25T15:58:54.524-05:00  INFO 31217 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : Order 1 completed successfuly!
+2026-03-25T15:58:54.525-05:00  INFO 31217 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-25T15:58:57.018-05:00  INFO 31217 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-25T15:58:57.019-05:00  INFO 31217 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-25T15:58:57.022-05:00  INFO 31217 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-03-25T15:58:57.186-05:00  INFO 31217 --- [http-nio-8080-exec-1] c.z.o.controller.OrderController         : Received order request: 1
+2026-03-25T15:58:57.186-05:00  INFO 31217 --- [http-nio-8080-exec-1] com.zain.ordersystem.OrderProcessor      : processed using credit card
+2026-03-25T15:58:57.186-05:00  INFO 31217 --- [http-nio-8080-exec-1] com.zain.ordersystem.OrderProcessor      : Digital fulfillment
+2026-03-25T15:58:57.187-05:00  INFO 31217 --- [http-nio-8080-exec-1] com.zain.ordersystem.OrderProcessor      : Order 1 completed successfuly!
+2026-03-25T15:58:57.188-05:00  INFO 31217 --- [http-nio-8080-exec-1] c.z.o.controller.OrderController         : Finished processing order: 1
+2026-03-25T15:59:28.183-05:00  INFO 31217 --- [http-nio-8080-exec-2] c.z.o.controller.OrderController         : Received order request: 1
+2026-03-25T15:59:28.188-05:00  INFO 31217 --- [http-nio-8080-exec-2] com.zain.ordersystem.OrderProcessor      : processed using debit card
+2026-03-25T15:59:28.188-05:00  INFO 31217 --- [http-nio-8080-exec-2] com.zain.ordersystem.OrderProcessor      : Digital fulfillment
+2026-03-25T15:59:28.223-05:00 ERROR 31217 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.zain.ordersystem.PaymentProcessor.processPayment(com.zain.ordersystem.Order)" because "processor" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.zain.ordersystem.PaymentProcessor.processPayment(com.zain.ordersystem.Order)" because "processor" is null
+	at com.zain.ordersystem.OrderProcessor.process(OrderProcessor.java:83) ~[classes/:na]
+	at com.zain.ordersystem.controller.OrderController.processOrder(OrderController.java:33) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-03-25T15:59:58.476-05:00  INFO 31217 --- [http-nio-8080-exec-3] c.z.o.controller.OrderController         : Received order request: 2
+2026-03-25T15:59:58.477-05:00  INFO 31217 --- [http-nio-8080-exec-3] com.zain.ordersystem.OrderProcessor      : processed using debit card
+2026-03-25T15:59:58.477-05:00  INFO 31217 --- [http-nio-8080-exec-3] com.zain.ordersystem.OrderProcessor      : Digital fulfillment
+2026-03-25T15:59:58.495-05:00 ERROR 31217 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.zain.ordersystem.PaymentProcessor.processPayment(com.zain.ordersystem.Order)" because "processor" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.zain.ordersystem.PaymentProcessor.processPayment(com.zain.ordersystem.Order)" because "processor" is null
+	at com.zain.ordersystem.OrderProcessor.process(OrderProcessor.java:83) ~[classes/:na]
+	at com.zain.ordersystem.controller.OrderController.processOrder(OrderController.java:33) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-03-25T16:01:23.201-05:00  INFO 31217 --- [http-nio-8080-exec-4] c.z.o.controller.OrderController         : Received order request: 1
+2026-03-25T16:01:23.202-05:00  INFO 31217 --- [http-nio-8080-exec-4] com.zain.ordersystem.OrderProcessor      : processed using debit card
+2026-03-25T16:01:23.202-05:00  INFO 31217 --- [http-nio-8080-exec-4] com.zain.ordersystem.OrderProcessor      : Digital fulfillment
+2026-03-25T16:01:23.203-05:00 ERROR 31217 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.zain.ordersystem.PaymentProcessor.processPayment(com.zain.ordersystem.Order)" because "processor" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.zain.ordersystem.PaymentProcessor.processPayment(com.zain.ordersystem.Order)" because "processor" is null
+	at com.zain.ordersystem.OrderProcessor.process(OrderProcessor.java:83) ~[classes/:na]
+	at com.zain.ordersystem.controller.OrderController.processOrder(OrderController.java:33) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-03-25T16:06:05.814-05:00  INFO 31217 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-25T16:06:05.840-05:00  INFO 31217 --- [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-25T16:06:05.851-05:00  INFO 31217 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T16:06:06.035-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Starting OrderProcessingApplication using Java 21.0.10 with PID 31217 (/Users/zainmorshed/Desktop/GhostDrive/order-processing/target/classes started by zainmorshed in /Users/zainmorshed/Desktop/GhostDrive/order-processing)
+2026-03-25T16:06:06.035-05:00 DEBUG 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-25T16:06:06.035-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T16:06:06.211-05:00  INFO 31217 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-25T16:06:06.212-05:00  INFO 31217 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T16:06:06.212-05:00  INFO 31217 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T16:06:06.221-05:00  INFO 31217 --- [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 183 ms
+2026-03-25T16:06:06.288-05:00  INFO 31217 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-25T16:06:06.290-05:00  INFO 31217 --- [restartedMain] c.z.o.OrderProcessingApplication         : Started OrderProcessingApplication in 0.283 seconds (process running for 699.013)
+2026-03-25T16:06:06.292-05:00  INFO 31217 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : processed using credit card
+2026-03-25T16:06:06.293-05:00  INFO 31217 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : Shipping fulfillment
+2026-03-25T16:06:06.293-05:00  INFO 31217 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : Order 1 completed successfuly!
+2026-03-25T16:06:06.294-05:00  INFO 31217 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-25T16:06:07.494-05:00  INFO 31217 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-25T16:06:07.498-05:00  INFO 31217 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T16:06:09.091-05:00  INFO 37035 --- [restartedMain] c.z.o.OrderProcessingApplication         : Starting OrderProcessingApplication using Java 21.0.10 with PID 37035 (/Users/zainmorshed/Desktop/GhostDrive/order-processing/target/classes started by zainmorshed in /Users/zainmorshed/Desktop/GhostDrive/order-processing)
+2026-03-25T16:06:09.094-05:00 DEBUG 37035 --- [restartedMain] c.z.o.OrderProcessingApplication         : Running with Spring Boot v4.0.4, Spring v7.0.6
+2026-03-25T16:06:09.095-05:00  INFO 37035 --- [restartedMain] c.z.o.OrderProcessingApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T16:06:09.152-05:00  INFO 37035 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-25T16:06:09.152-05:00  INFO 37035 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-25T16:06:09.917-05:00  INFO 37035 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-25T16:06:09.932-05:00  INFO 37035 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T16:06:09.933-05:00  INFO 37035 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T16:06:09.969-05:00  INFO 37035 --- [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 817 ms
+2026-03-25T16:06:10.327-05:00  INFO 37035 --- [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-25T16:06:10.332-05:00  INFO 37035 --- [restartedMain] c.z.o.OrderProcessingApplication         : Started OrderProcessingApplication in 1.76 seconds (process running for 2.209)
+2026-03-25T16:06:10.337-05:00  INFO 37035 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : processed using credit card
+2026-03-25T16:06:10.338-05:00  INFO 37035 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : Shipping fulfillment
+2026-03-25T16:06:10.339-05:00  INFO 37035 --- [restartedMain] com.zain.ordersystem.OrderProcessor      : Order 1 completed successfuly!
+2026-03-25T16:06:14.739-05:00  INFO 37035 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-25T16:06:14.740-05:00  INFO 37035 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-25T16:06:14.742-05:00  INFO 37035 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-25T16:06:14.950-05:00  INFO 37035 --- [http-nio-8080-exec-1] c.z.o.controller.OrderController         : Received order request: 1
+2026-03-25T16:06:14.951-05:00  INFO 37035 --- [http-nio-8080-exec-1] com.zain.ordersystem.OrderProcessor      : processed using debit card
+2026-03-25T16:06:14.951-05:00  INFO 37035 --- [http-nio-8080-exec-1] com.zain.ordersystem.OrderProcessor      : Digital fulfillment
+2026-03-25T16:06:14.951-05:00  INFO 37035 --- [http-nio-8080-exec-1] com.zain.ordersystem.OrderProcessor      : Order 1 completed successfuly!
+2026-03-25T16:06:14.952-05:00  INFO 37035 --- [http-nio-8080-exec-1] c.z.o.controller.OrderController         : Finished processing order: 1
