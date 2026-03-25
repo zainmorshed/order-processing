@@ -1,0 +1,10 @@
+pricing:
+  salesTax: 0.07
+  deliveryFee: 5.0
+  discount: 2.0
+logging:
+  file:
+    name: logs/orders.log
+  level:
+    root: INFO
+    com.zain.ordersystem: DEBUG
